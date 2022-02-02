@@ -31,6 +31,11 @@ let pageCreation = (()=>{
     main.appendChild(project_form);
 
     body.appendChild(main);
+
+    const content = document.createElement('div');
+    content.id = "content";
+
+    body.appendChild(content);
 })();
 
 export {pageCreation};

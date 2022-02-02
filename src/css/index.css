@@ -5,3 +5,10 @@ form {
 .active {
   display: flex;
 }
+
+.proj_cont {
+  height: 10vh;
+  width: 100px;
+  background-color: blue;
+  border: red solid 2px;
+}
