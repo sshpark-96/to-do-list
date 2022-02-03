@@ -1,9 +1,10 @@
 class Todo{
-    constructor(name, desc, due, prio){
+    constructor(name, desc = "", due = "", prio = ""){
         this.name = name;
         this.desc = desc;
         this.due = due;
         this.prio = prio;
+        this.completed = false;
     };
 
     changeName(name){
@@ -17,6 +18,9 @@ class Todo{
     }
     changePrio(prio){
         this.prio = prio;
+    }
+    taskCompleted(){
+        this.completed = true;
     }
 
     returnName(){

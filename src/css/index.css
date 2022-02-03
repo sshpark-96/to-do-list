@@ -1,3 +1,37 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#container {
+  display: grid;
+  width: 80vw;
+  height: 80vh;
+  grid-template-rows: 10% 80% 10%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+#side_bar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* 
 form {
   display: none;
 }
@@ -9,6 +43,6 @@ form {
 .proj_cont {
   height: 10vh;
   width: 100px;
-  background-color: blue;
+  background-color: greenyellow;
   border: red solid 2px;
-}
+} */

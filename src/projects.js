@@ -11,8 +11,7 @@ class Project{
         this.name = name;
     }
 
-    createTodo(name, desc, due, prio){
-        let todo = new Todo(name, desc, due, prio);
+    addTodo(todo){
         this.todos.push(todo);
     }
 
@@ -21,18 +20,12 @@ class Project{
         this.todos.splice(index, 1);
     }
 
-    returnTotalTodo(){
-        return this.todos.length;
-    }
-
-    returnTodoToday(){
+    returnTodoRemaining(){
         let count = 0;
-        let today = new Date();
-        let today_date = format(new Date(today.getFullYear(), today.getMonth(), today.getDate()), 'yyyy-MM-dd');
-        console.log(today_date);
+        
         
         this.todos.forEach(todo=>{
-            if(todo.due === today_date){
+            if(!todo.completed){
                 count++;
             }
         });
@@ -41,3 +34,8 @@ class Project{
 }
 
 export {Project};
+
+// USE FOR GETTING TODO DUE TODAY
+//let today = new Date();
+// let today_date = format(new Date(today.getFullYear(), today.getMonth(), today.getDate()), 'yyyy-MM-dd');
+// console.log(today_date);
