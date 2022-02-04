@@ -35,7 +35,7 @@ let page_layout = (()=>{
     const p_name = document.createElement("span");
     p_name.textContent = "Your Projects";
     const p_add = document.createElement("span");
-    p_add.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>';
+    p_add.innerHTML = '<svg id="p_add" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>';
     const projects_list = document.createElement("div");
     projects_list.id = "projects_list";
 
@@ -51,7 +51,7 @@ let page_layout = (()=>{
     const t_name = document.createElement("span")
     t_name.textContent = "Your Tasks";
     const t_add = document.createElement("span");
-    t_add.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>';
+    t_add.innerHTML = '<svg id="t_add" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>';
     const tasks_list = document.createElement("div");
     tasks_list.id = "tasks_list";
 
@@ -81,10 +81,20 @@ let page_layout = (()=>{
 
 
     //Content - Nothing inside for now (But will display all the tasks in project or in viewing all tasks)
+    
     const content = document.createElement("div");
     content.id = "content";
-    content.textContent = "Content Goes Here";
+    const content_name = document.createElement("span");
+    content_name.id = "content_name";
+    const content_display = document.createElement("div");
+    content_display.id = "content_display";
+    //temporary placeholder:
+    content_display.textContent = "Content Goes Here";
+    content_name.textContent = "Content Title (Your Tasks, Your Projects, Specific Projects Due Today, etc)"
     
+    content.appendChild(content_name);
+    content.appendChild(content_display);
+
     main.appendChild(content);
 
 

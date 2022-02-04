@@ -17,18 +17,60 @@ header {
   padding: 20px 50px;
   display: flex;
   justify-content: space-between;
+  background-color: lightblue;
+  align-items: center;
+  color: white;
 }
 
 main {
+  padding: 15px 5% 0 0;
   display: grid;
   grid-template-columns: 20% 80%;
 }
 
 #side_bar {
+  display: grid;
+  grid-template-rows: 33.3% 33.3% 33.3%;
+}
+
+#side_bar > * {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  overflow: hidden;
+}
+
+#projects_list,
+#tasks_list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: center;
+  justify-content: left;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.proj_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#content {
+  display: grid;
+  grid-template-rows: 10% 90%;
+}
+
+#content_name {
+  display: flex;
+  justify-content: right;
+  padding-right: 30px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /* 
@@ -46,3 +88,11 @@ form {
   background-color: greenyellow;
   border: red solid 2px;
 } */
+
+footer {
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

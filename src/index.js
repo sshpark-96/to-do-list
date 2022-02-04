@@ -3,9 +3,26 @@ import { Project } from "./projects";
 import { page_layout } from "./pages/page_layout";
 import { project_todo } from "./pages/project_todo";
 
+// Logic for the program here
 
+let project_list = [];
 
-
+document.addEventListener('click', (e)=>{
+    // Logic for adding the Projects
+    if(e.target.id === "p_add"){
+        let project = new Project("New Project");
+        project_list.push(project);
+        project.printProject();
+    } else 
+    // Logic for deleting the Projects
+    if(e.target.classList.contains("p_delete")){
+        let grandParentNode = e.target.parentNode.parentNode;
+        let index = project_list.map((e)=>{return e.name}).indexOf(grandParentNode.getAttribute("data-proj-id"));
+        project_list[index].removeProject();
+        project_list.splice(index, 1);
+    }
+    console.table(project_list);
+})
 
 
 
